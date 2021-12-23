@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.hibernate.SessionFactory;
@@ -71,7 +72,7 @@ public class StartWindowController {
         Parent root = null;
 
         try {
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/main.fxml")));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/general_window.fxml")));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -79,6 +80,7 @@ public class StartWindowController {
         assert root != null;
         stage.setScene(new Scene(root));
         stage.setTitle("Authorization");
+        stage.getIcons().add(new Image("/school_logo.png"));
         stage.show();
 
     }
@@ -104,6 +106,7 @@ public class StartWindowController {
         stage.setTitle("Registration");
         assert root != null;
         stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image("/school_logo.png"));
         stage.show();
     }
 
@@ -121,6 +124,7 @@ public class StartWindowController {
         assert root != null;
         stage.setTitle("Воставление пароля");
         stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image("/school_logo.png"));
         stage.show();
     }
 }

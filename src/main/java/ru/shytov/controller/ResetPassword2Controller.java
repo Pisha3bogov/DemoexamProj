@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.hibernate.SessionFactory;
@@ -59,6 +60,7 @@ public class ResetPassword2Controller {
         assert root != null;
         stage.setTitle("Восстановление пароля");
         stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image("/school_logo.png"));
         stage.show();
     }
 
@@ -76,6 +78,7 @@ public class ResetPassword2Controller {
         assert root != null;
         stage.setTitle("Авторизация");
         stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image("/school_logo.png"));
         stage.show();
     }
 

@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.hibernate.JDBCException;
@@ -86,7 +87,9 @@ public class RegistrationController {
         }
 
         stage.setTitle("Authorization");
+        assert root != null;
         stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image("/school_logo.png"));
         stage.show();
     }
 
